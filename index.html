@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>МедСервис — Медсестра на дом</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="fixed top-0 left-0 w-full z-50 p-4">
+  <div class="max-w-7xl mx-auto glass rounded-[28px] px-5 py-3.5 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-white text-lg">
+        <i class="fa-solid fa-user-nurse"></i>
+      </div>
+      <div>
+        <h2 class="text-slate-900 font-black text-[1.15rem]" style="font-family:Syne,sans-serif">
+          Мед<span class="text-sky-500">Сервис</span>
+        </h2>
+        <p class="text-slate-400 text-[9px] uppercase tracking-[.2em]">24/7 SERVICE</p>
+      </div>
+    </div>
+    <button id="openMenu" class="lg:hidden w-11 h-11 rounded-2xl bg-slate-100 text-slate-700 text-lg">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <nav class="hidden lg:flex items-center gap-8 text-slate-800 font-semibold text-[.95rem]">
+      <a href="#services" class="hover:text-sky-500 transition">Услуги</a>
+      <a href="#steps" class="hover:text-sky-500 transition">Этапы</a>
+      <a href="#contact" class="hover:text-sky-500 transition">Контакты</a>
+      <a href="#contact" class="pulse-btn h-12 px-7 rounded-2xl bg-gradient-to-r from-sky-500 to-indigo-500 text-white flex items-center gap-2 hover:opacity-90 transition">
+        <i class="fa-solid fa-phone-flip text-sm"></i> Вызвать
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="menu fixed inset-0 z-[100] p-6 flex flex-col">
+  <div class="flex items-center justify-between">
+    <h2 class="text-slate-900 font-black text-2xl" style="font-family:Syne,sans-serif">Меню</h2>
+    <button id="closeMenu" class="w-11 h-11 rounded-2xl bg-slate-100 text-slate-700">
+      <i class="fa-solid fa-xmark text-lg"></i>
+    </button>
+  </div>
+  <div class="flex flex-col gap-6 mt-14 text-slate-900 text-2xl font-bold" style="font-family:Syne,sans-serif">
+    <a href="#services" class="hover:text-sky-500 transition">Услуги</a>
+    <a href="#steps" class="hover:text-sky-500 transition">Этапы</a>
+    <a href="#contact" class="hover:text-sky-500 transition">Контакты</a>
+  </div>
+  <div class="mt-auto">
+    <a href="#contact" class="flex items-center justify-center gap-3 h-16 rounded-2xl bg-gradient-to-r from-sky-500 to-indigo-500 text-white font-bold text-lg">
+      <i class="fa-solid fa-phone-flip"></i> Вызвать медсестру
+    </a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero-bg pt-32 pb-20 relative overflow-hidden">
+  <div class="hero-grid"></div>
+  <div class="hero-orb-1"></div>
+  <div class="hero-orb-2"></div>
+  <div class="max-w-7xl mx-auto px-4 relative z-10">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-white/10 bg-white/08 backdrop-blur-xl text-white/90 text-sm mb-8">
+          <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+          Медсестра в Ташкенте · сейчас онлайн
+        </div>
+        <h1 class="font-display text-6xl md:text-7xl font-black text-white leading-[1.05]" style="font-family:Syne,sans-serif">
+          Медсестра<br>
+          <span class="bg-gradient-to-r from-sky-300 via-cyan-200 to-indigo-200 bg-clip-text text-transparent">на дом</span>
+        </h1>
+        <p class="text-slate-300 text-lg leading-relaxed mt-6 max-w-lg">
+          Капельницы, уколы, перевязки и анализы с выездом по всему Ташкенту — круглосуточно.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 mt-9">
+          <a href="#contact" class="pulse-btn h-14 px-7 rounded-2xl bg-white text-slate-900 font-bold flex items-center justify-center text-base gap-2 hover:bg-sky-50 transition">
+            <i class="fa-solid fa-calendar-check text-sky-500"></i> Вызвать медсестру
+          </a>
+          <a href="tel:+998901234567" class="h-14 px-7 rounded-2xl bg-white/10 border border-white/10 text-white font-semibold flex items-center justify-center gap-2.5 hover:bg-white/15 transition">
+            <i class="fa-solid fa-phone text-sky-300"></i> Позвонить
+          </a>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-10">
+          <div class="hero-stat rounded-[22px] p-4">
+            <div class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-300 flex items-center justify-center mb-3">
+              <i class="fa-solid fa-clock text-sm"></i>
+            </div>
+            <div class="text-2xl font-black text-white" style="font-family:Syne,sans-serif">15 мин</div>
+            <p class="text-slate-400 text-xs mt-1">Средний приезд</p>
+          </div>
+          <div class="hero-stat rounded-[22px] p-4">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center mb-3">
+              <i class="fa-solid fa-shield-heart text-sm"></i>
+            </div>
+            <div class="text-2xl font-black text-white" style="font-family:Syne,sans-serif">100%</div>
+            <p class="text-slate-400 text-xs mt-1">Стерильность</p>
+          </div>
+          <div class="hero-stat rounded-[22px] p-4">
+            <div class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-300 flex items-center justify-center mb-3">
+              <i class="fa-solid fa-star text-sm"></i>
+            </div>
+            <div class="text-2xl font-black text-white" style="font-family:Syne,sans-serif">4.9★</div>
+            <p class="text-slate-400 text-xs mt-1">Рейтинг</p>
+          </div>
+          <div class="hero-stat rounded-[22px] p-4">
+            <div class="w-10 h-10 rounded-xl bg-rose-500/20 text-rose-300 flex items-center justify-center mb-3">
+              <i class="fa-solid fa-heart-pulse text-sm"></i>
+            </div>
+            <div class="text-2xl font-black text-white" style="font-family:Syne,sans-serif">24/7</div>
+            <p class="text-slate-400 text-xs mt-1">Работаем</p>
+          </div>
+        </div>
+      </div>
+      <div class="hidden lg:flex justify-center">
+        <div class="relative">
+          <div class="absolute -inset-4 bg-gradient-to-tr from-sky-500/20 to-indigo-500/20 rounded-[44px] blur-2xl"></div>
+          <div class="relative bg-white/08 backdrop-blur-xl border border-white/10 rounded-[36px] p-5">
+            <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1000&auto=format&fit=crop"
+                 class="rounded-[28px] h-[520px] w-[420px] object-cover" />
+            <div class="absolute -bottom-5 -left-5 bg-white rounded-2xl px-5 py-3 shadow-2xl flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-500 flex items-center justify-center">
+                <i class="fa-solid fa-check-double"></i>
+              </div>
+              <div>
+                <div class="font-black text-slate-900 text-sm" style="font-family:Syne,sans-serif">Более 2 000</div>
+                <div class="text-slate-500 text-xs">довольных пациентов</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip py-5 border-y border-sky-100">
+  <div class="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-center gap-6 sm:gap-12 text-slate-500 text-sm font-medium">
+    <span class="flex items-center gap-2"><i class="fa-solid fa-certificate text-sky-500"></i> Лицензированные медсёстры</span>
+    <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-sky-500"></i> Весь Ташкент</span>
+    <span class="flex items-center gap-2"><i class="fa-solid fa-syringe text-sky-500"></i> Стерильный инструментарий</span>
+    <span class="flex items-center gap-2"><i class="fa-solid fa-wallet text-sky-500"></i> Без скрытых наценок</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services" class="py-24">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="mb-14 fade-up">
+      <span class="text-sky-500 uppercase tracking-[.28em] text-[11px] font-black">Услуги</span>
+      <h2 class="text-4xl md:text-6xl font-black text-slate-900 mt-4" style="font-family:Syne,sans-serif">Процедуры на дому</h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="service-card rounded-[32px] p-8 fade-up">
+        <div class="w-14 h-14 rounded-2xl bg-sky-50 text-sky-500 flex items-center justify-center text-xl mb-8">
+          <i class="fa-solid fa-droplet"></i>
+        </div>
+        <h3 class="text-2xl font-black text-slate-900" style="font-family:Syne,sans-serif">Капельницы</h3>
+        <p class="text-slate-500 mt-3 leading-relaxed text-[.95rem]">Внутривенные инфузии по назначению врача. Все расходники включены.</p>
+        <div class="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
+          <span class="text-slate-400 text-sm">от</span>
+          <span class="font-black text-base bg-sky-50 text-sky-600 px-4 py-2 rounded-xl">150 000 сум</span>
+        </div>
+      </div>
+      <div class="service-card rounded-[32px] p-8 fade-up">
+        <div class="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-500 flex items-center justify-center text-xl mb-8">
+          <i class="fa-solid fa-syringe"></i>
+        </div>
+        <h3 class="text-2xl font-black text-slate-900" style="font-family:Syne,sans-serif">Инъекции</h3>
+        <p class="text-slate-500 mt-3 leading-relaxed text-[.95rem]">Все виды уколов — внутримышечные, подкожные и внутривенные.</p>
+        <div class="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
+          <span class="text-slate-400 text-sm">от</span>
+          <span class="font-black text-base bg-indigo-50 text-indigo-600 px-4 py-2 rounded-xl">40 000 сум</span>
+        </div>
+      </div>
+      <div class="service-card rounded-[32px] p-8 fade-up">
+        <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-500 flex items-center justify-center text-xl mb-8">
+          <i class="fa-solid fa-vial"></i>
+        </div>
+        <h3 class="text-2xl font-black text-slate-900" style="font-family:Syne,sans-serif">Анализы</h3>
+        <p class="text-slate-500 mt-3 leading-relaxed text-[.95rem]">Забор крови, мочи и других биоматериалов с выездом на дом.</p>
+        <div class="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
+          <span class="text-slate-400 text-sm">от</span>
+          <span class="font-black text-base bg-emerald-50 text-emerald-600 px-4 py-2 rounded-xl">80 000 сум</span>
+        </div>
+      </div>
+      <div class="service-card rounded-[32px] p-8 fade-up">
+        <div class="w-14 h-14 rounded-2xl bg-rose-50 text-rose-500 flex items-center justify-center text-xl mb-8">
+          <i class="fa-solid fa-bandage"></i>
+        </div>
+        <h3 class="text-2xl font-black text-slate-900" style="font-family:Syne,sans-serif">Перевязки</h3>
+        <p class="text-slate-500 mt-3 leading-relaxed text-[.95rem]">Послеоперационные и травматические перевязки с обработкой ран.</p>
+        <div class="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
+          <span class="text-slate-400 text-sm">от</span>
+          <span class="font-black text-base bg-rose-50 text-rose-600 px-4 py-2 rounded-xl">60 000 сум</span>
+        </div>
+      </div>
+      <div class="service-card rounded-[32px] p-8 fade-up">
+        <div class="w-14 h-14 rounded-2xl bg-amber-50 text-amber-500 flex items-center justify-center text-xl mb-8">
+          <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+        <h3 class="text-2xl font-black text-slate-900" style="font-family:Syne,sans-serif">Уход за лежачими</h3>
+        <p class="text-slate-500 mt-3 leading-relaxed text-[.95rem]">Комплексный уход, профилактика пролежней и гигиенические процедуры.</p>
+        <div class="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
+          <span class="text-slate-400 text-sm">от</span>
+          <span class="font-black text-base bg-amber-50 text-amber-600 px-4 py-2 rounded-xl">200 000 сум</span>
+        </div>
+      </div>
+      <div class="service-card rounded-[32px] p-8 fade-up bg-gradient-to-br from-sky-500 to-indigo-600 border-0">
+        <div class="w-14 h-14 rounded-2xl bg-white/15 text-white flex items-center justify-center text-xl mb-8">
+          <i class="fa-solid fa-headset"></i>
+        </div>
+        <h3 class="text-2xl font-black text-white" style="font-family:Syne,sans-serif">Консультация</h3>
+        <p class="text-white/70 mt-3 leading-relaxed text-[.95rem]">Не знаете что нужно? Позвоните — поможем разобраться и подберём услугу.</p>
+        <div class="mt-8 pt-6 border-t border-white/15 flex items-center justify-between">
+          <span class="text-white/60 text-sm">Всегда</span>
+          <a href="tel:+998901234567" class="font-black text-base bg-white text-sky-600 px-4 py-2 rounded-xl hover:bg-sky-50 transition">Позвонить</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section id="steps" class="py-24 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-16 fade-up">
+      <span class="text-indigo-500 uppercase tracking-[.28em] text-[11px] font-black">Этапы</span>
+      <h2 class="text-4xl md:text-6xl font-black text-slate-900 mt-4" style="font-family:Syne,sans-serif">Как это работает</h2>
+    </div>
+    <div class="grid lg:grid-cols-3 gap-6">
+      <div class="step-card rounded-[32px] p-8 relative overflow-hidden fade-up">
+        <div class="step-num" style="color:#bae6fd">01</div>
+        <div class="w-14 h-14 rounded-2xl bg-sky-500 text-white flex items-center justify-center text-xl relative z-10">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+        <h3 class="text-2xl font-black text-slate-900 mt-8 relative z-10" style="font-family:Syne,sans-serif">Заявка</h3>
+        <p class="text-slate-500 mt-3 leading-relaxed relative z-10">Оставляете заявку на сайте или звоните. Мы ответим в течение минуты.</p>
+      </div>
+      <div class="step-card rounded-[32px] p-8 relative overflow-hidden fade-up">
+        <div class="step-num" style="color:#c7d2fe">02</div>
+        <div class="w-14 h-14 rounded-2xl bg-indigo-500 text-white flex items-center justify-center text-xl relative z-10">
+          <i class="fa-solid fa-truck-medical"></i>
+        </div>
+        <h3 class="text-2xl font-black text-slate-900 mt-8 relative z-10" style="font-family:Syne,sans-serif">Выезд</h3>
+        <p class="text-slate-500 mt-3 leading-relaxed relative z-10">Медсестра приезжает со всем стерильным оборудованием в течение 15–30 минут.</p>
+      </div>
+      <div class="step-card rounded-[32px] p-8 relative overflow-hidden fade-up">
+        <div class="step-num" style="color:#bbf7d0">03</div>
+        <div class="w-14 h-14 rounded-2xl bg-emerald-500 text-white flex items-center justify-center text-xl relative z-10">
+          <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+        <h3 class="text-2xl font-black text-slate-900 mt-8 relative z-10" style="font-family:Syne,sans-serif">Процедура</h3>
+        <p class="text-slate-500 mt-3 leading-relaxed relative z-10">Аккуратное и профессиональное проведение процедуры у вас дома.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24 contact-bg relative overflow-hidden">
+  <div class="hero-grid absolute inset-0"></div>
+  <div class="hero-orb-1" style="top:-60px;right:-60px;width:400px;height:400px;"></div>
+  <div class="max-w-4xl mx-auto px-4 relative z-10">
+    <div class="text-center mb-12 fade-up">
+      <span class="text-sky-300 uppercase tracking-[.28em] text-[11px] font-black">Контакты</span>
+      <h2 class="text-4xl md:text-6xl font-black text-white mt-4" style="font-family:Syne,sans-serif">Вызвать медсестру</h2>
+      <p class="text-slate-300 mt-4">Заполните форму и мы перезвоним в течение 2 минут</p>
+    </div>
+    <div class="bg-white/08 border border-white/12 backdrop-blur-xl rounded-[36px] p-8 md:p-12 fade-up">
+      <div class="grid md:grid-cols-2 gap-5">
+        <div>
+          <label class="text-white/60 text-sm mb-2 block">Имя</label>
+          <input type="text" placeholder="Ваше имя" class="w-full bg-white/10 border border-white/12 rounded-2xl px-5 py-4 text-white placeholder:text-white/40 focus:border-sky-400 transition" />
+        </div>
+        <div>
+          <label class="text-white/60 text-sm mb-2 block">Телефон</label>
+          <input type="tel" placeholder="+998 __ ___ __ __" class="w-full bg-white/10 border border-white/12 rounded-2xl px-5 py-4 text-white placeholder:text-white/40 focus:border-sky-400 transition" />
+        </div>
+        <div class="md:col-span-2">
+          <label class="text-white/60 text-sm mb-2 block">Адрес</label>
+          <input type="text" placeholder="Район, улица, дом" class="w-full bg-white/10 border border-white/12 rounded-2xl px-5 py-4 text-white placeholder:text-white/40 focus:border-sky-400 transition" />
+        </div>
+        <div class="md:col-span-2">
+          <label class="text-white/60 text-sm mb-2 block">Комментарий</label>
+          <textarea rows="3" placeholder="Что нужно сделать?" class="w-full bg-white/10 border border-white/12 rounded-2xl px-5 py-4 text-white placeholder:text-white/40 focus:border-sky-400 transition resize-none"></textarea>
+        </div>
+      </div>
+      <button class="pulse-btn w-full mt-6 h-16 rounded-2xl bg-white text-slate-900 font-black text-lg flex items-center justify-center gap-3 hover:bg-sky-50 transition" style="font-family:Syne,sans-serif">
+        <i class="fa-solid fa-paper-plane text-sky-500"></i> Отправить заявку
+      </button>
+      <p class="text-white/40 text-xs text-center mt-4">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer-bg footer-grid relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/30 pointer-events-none"></div>
+  <div class="max-w-7xl mx-auto px-4 pt-16 pb-8 relative z-10">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
+      <div class="lg:col-span-2">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-white text-xl">
+            <i class="fa-solid fa-user-nurse"></i>
+          </div>
+          <div>
+            <h2 class="font-black text-xl text-black" style="font-family:Syne,sans-serif">
+              Мед<span class="text-sky-400">Сервис</span>
+            </h2>
+            <p class="text-slate-500 text-[10px] uppercase tracking-[.2em]">24/7 SERVICE</p>
+          </div>
+        </div>
+        <p class="text-slate-400 leading-relaxed max-w-sm text-sm">
+          Профессиональная медицинская помощь на дому в Ташкенте. Лицензированные медсёстры, стерильное оборудование, быстрый выезд.
+        </p>
+        <div class="flex items-center gap-3 mt-6">
+          <a href="#" class="w-10 h-10 rounded-xl bg-white/08 border border-white/10 text-slate-400 hover:text-white hover:border-sky-500 transition flex items-center justify-center">
+            <i class="fa-brands fa-telegram"></i>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-xl bg-white/08 border border-white/10 text-slate-400 hover:text-white hover:border-sky-500 transition flex items-center justify-center">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-xl bg-white/08 border border-white/10 text-slate-400 hover:text-white hover:border-sky-500 transition flex items-center justify-center">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-black font-bold mb-5 text-sm uppercase tracking-widest" style="font-family:Syne,sans-serif">Услуги</h4>
+        <ul class="space-y-3 text-slate-400 text-sm">
+          <li><a href="#" class="hover:text-sky-400 transition flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-sky-500"></i> Капельницы</a></li>
+          <li><a href="#" class="hover:text-sky-400 transition flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-sky-500"></i> Инъекции</a></li>
+          <li><a href="#" class="hover:text-sky-400 transition flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-sky-500"></i> Перевязки</a></li>
+          <li><a href="#" class="hover:text-sky-400 transition flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-sky-500"></i> Анализы</a></li>
+          <li><a href="#" class="hover:text-sky-400 transition flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-sky-500"></i> Уход за пациентами</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-black font-bold mb-5 text-sm uppercase tracking-widest" style="font-family:Syne,sans-serif">Контакты</h4>
+        <ul class="space-y-4 text-slate-400 text-sm">
+          <li class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-sky-500/15 text-sky-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fa-solid fa-phone text-xs"></i>
+            </div>
+            <div>
+              <div class="text-black/60 text-xs mb-0.5">Телефон</div>
+              <a href="tel:+998901234567" class="hover:text-sky-400 transition font-medium">+998 90 123 45 67</a>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-sky-500/15 text-sky-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fa-brands fa-telegram text-xs"></i>
+            </div>
+            <div>
+              <div class="text-black/60 text-xs mb-0.5">Telegram</div>
+              <a href="#" class="hover:text-sky-400 transition font-medium">@medservice_uz</a>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-sky-500/15 text-sky-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fa-solid fa-location-dot text-xs"></i>
+            </div>
+            <div>
+              <div class="text-black/60 text-xs mb-0.5">Город</div>
+              <span>Ташкент, все районы</span>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500/15 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fa-solid fa-clock text-xs"></i>
+            </div>
+            <div>
+              <div class="text-black/60 text-xs mb-0.5">Режим работы</div>
+              <span class="text-emerald-400 font-medium">Круглосуточно 24/7</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-divider h-px w-full mb-7"></div>
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-sm">
+      <p>© 2025 МедСервис. Все права защищены.</p>
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+        <span class="text-emerald-400 font-medium">Принимаем заявки прямо сейчас</span>
+      </div>
+      <div class="flex gap-5">
+        <a href="#" class="hover:text-slate-300 transition">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="./app.js"></script>
+</body>
+</html>
